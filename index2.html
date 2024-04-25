@@ -1,0 +1,381 @@
+<!-- 
+    Creador: Allan Sandoval Mardones
+    Carrera: Analista Programador
+    Sección: AP-171-N2
+
+Cooperativa de productores lecheros de la región de la Araucanía, especializados en queso y similares.
+
+Para esto considere la utilización de:
+    Framework Bootstrap
+    Estilos CSS personalizados
+    Imágenes apropiadas al contexto.
+
+Debe considerar:
+    Componentes de tipo Card, Carrusel, Navbar,formulario  como mínimo
+    Estilos CSS a nivel de clase, id y etiqueta.
+    Comentarios a nivel HTML para explicar las secciones construidas.
+    No utilizar elementos diferentes a los vistos en clase (Otros framework)
+-->
+
+
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css" integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+    <title>Donguil - Quesos de la Araucanía</title>
+</head>
+
+<body>
+
+    <!-- NAVBAR BOOTSTRAP -->
+
+    <nav class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#"></a>
+            <img class="logo-img" src="img/logo.png" alt="Bootstrap" width="177" height="60">
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar"
+                aria-labelledby="offcanvasNavbarLabel">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Menu</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas" aria-label="Close"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-center flex-grow-1 pe-3">
+                        <li class="nav-item">
+                            <a class="nav-link active mx-lg-2" aria-current="page" href="#">Inicio</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Nosotros</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Productos</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Sostentibilidad</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link mx-lg-2" href="#">Contactanos</a>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <button class="navbar-toggler pe-0" type="button" data-bs-toggle="offcanvas"
+                data-bs-target="#offcanvasNavbar" aria-controls="offcanvasNavbar" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+        </div>
+    </nav>
+
+    <!-- CARROUSEL BOOTSTRAP-->
+
+    <div id="carouselExample" class="carousel slide">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="0" class="active"
+                aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExample" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active c-item">
+                <img src="img/carrusel1.png" class="d-block w-100 c-img">
+                <div class="carousel-caption d-none d-md-block">
+                    <h3>Sustentabilidad</h3>
+                    <p> En Donguil creemos firmemente que debemos contribuir y ser un aporte en el cuidado del planeta,
+                        que será donde vivirán nuestras futuras generaciones.</p>
+                </div>
+            </div>
+            <div class="carousel-item c-item">
+                <img src="img/carrusel2.png" class="d-block w-100 c-img">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Productos Naturales</h5>
+                    <p>Todos nuestros productos son elaborados naturalmente, cuidamos de nuestros animales y su
+                        alimentación.</p>
+                </div>
+            </div>
+            <div class="carousel-item c-item">
+                <img src="img/carrusel3.png" class="d-block w-100 c-img">
+                <div class="carousel-caption d-none d-md-block">
+                    <h5>Calidad N°1 en quesos</h5>
+                    <p>Productores de uno de los mejores quesos, sabor unico y cremosidad, de la región de la Araucanía
+                        para el país.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Anterior</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Siguiente</span>
+        </button>
+    </div>
+
+    <!-- SECCION PRODUCTOS CON CARD-->
+
+    <section class="products">
+
+        <h2 class="product_title">Nuestros Productos</h2>
+
+        <div class="container">
+            <div class="row">
+                <div class="col">
+                    <div class="card">
+                        <img src="img/card1.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">Todos los productos de Quesos Donguil Lácteos están hechos
+                                exclusivamente con leche de vaca pasteurizada, sin preservantes ni aditivos. ¡Una
+                                deliciosa variedad para los amantes del queso!</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="img/card2.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">La rica leche de nuestra empresa de lácteos es un tesoro líquido que
+                                fluye directamente de nuestras vacas felices. Cada gota es una sinfonía de nutrientes:
+                                calcio, proteínas y vitaminas.</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="card">
+                        <img src="img/card3.png" class="card-img-top" alt="...">
+                        <div class="card-body">
+                            <p class="card-text">El delicioso yogur de nuestra empresa de lácteos es una obra maestra en
+                                cada cucharada. Elaborado con cariño y precisión, nuestro yogur es cremoso, suave y
+                                lleno de bondades.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="btn-product">
+            <button type="button" class="btn btn-danger">Ver más</button>
+        </div>
+    </section>
+
+
+
+    <!-- SECCION COMENTARIOS Y ACERCA DE -->
+
+    <section>
+
+        <div class="row">
+
+            <div class="container-fluid">
+                <nav id="img-sus">
+
+                    <div class="mb-3">
+                        <h2 class="form_coment"> Tus comentarios nos importan para mejorar y seguir creciendo</h2>
+                        <label for="exampleFormControlInput1" class="form-label">Correo Electrónico</label>
+                        <input type="email" class="form-control" id="exampleFormControlInput1"
+                            placeholder="nombre@ejemplo.com">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleFormControlTextarea1" class="form-label">Escribe tu comentario</label>
+                        <textarea class="form-control" id="exampleFormControlTextarea1" rows="3"></textarea>
+                    </div>
+                    <button type="button" class="btn btn-success">Enviar</button>
+                </nav>
+
+                <!-- ACCORDION-->
+
+                <article>
+                    <div class="container-fluid">
+                        <h1 class="title_info"> QUIENES SOMOS</h1>
+                    </div>
+
+                    <div class="accordion" id="accordionPanelsStayOpenExample">
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                                    aria-controls="panelsStayOpen-collapseOne">
+                                    Nacimiento
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show">
+                                <div class="accordion-body">
+
+                                    <div class="row">
+                                        <div class="col-4">
+
+                                            <img class="acc-img" src="img/acc1.png">
+
+                                        </div>
+
+                                        <div class="col-8">
+
+                                            <p class="acc-txt"> “Donguil” nació en la ciudad de Gorbea, fundada por los
+                                                hermanos Joel y Alfonso González. Su pasión por los productos lácteos y
+                                                las tradiciones culinarias de su abuela los llevó a crear quesos y
+                                                lácteos excepcionales. Con el tiempo, “Donguil” se convirtió en sinónimo
+                                                de sabor, tradición y amor por los lácteos en todo el país. </p>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseTwo">
+                                    Produccion
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+
+                                    <div class="row">
+                                        <div class="col-4">
+
+                                            <img class="acc-img" src="img/acc2.png">
+
+                                        </div>
+
+                                        <div class="col-8">
+
+                                            <p class="acc-txt"> Desde sus inicios, Donguil ha estado comprometida con la
+                                                calidad y la autenticidad. Aquí, la leche fresca de nuestras vacas
+                                                felices se transforma en una variedad de quesos deliciosos. Desde el
+                                                queso mantecoso hasta el queso tipo Chanco, cada pieza es un testimonio
+                                                de nuestra pasión por los lácteos. Nuestro proceso combina técnicas
+                                                tradicionales con tecnología moderna para garantizar que cada bocado sea
+                                                una experiencia inolvidable. Bienvenidos a Donguil, donde la leche se
+                                                convierte en arte. </p>
+
+                                        </div>
+                                    </div>
+
+
+                                </div>
+                            </div>
+                        </div>
+                        <div class="accordion-item">
+                            <h2 class="accordion-header">
+                                <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                                    data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                                    aria-controls="panelsStayOpen-collapseThree">
+                                    Objetivo
+                                </button>
+                            </h2>
+                            <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse">
+                                <div class="accordion-body">
+
+                                    <div class="row">
+                                        <div class="col-4">
+
+                                            <img class="acc-img" src="img/acc3.png">
+
+                                        </div>
+
+                                        <div class="col-8">
+
+                                            <p class="acc-txt"> El objetivo de Donguil es posicionarse como líder de
+                                                Chile en Nutrición, Salud y Bienestar, además, ser una empresa confiable
+                                                para todos sus grupos de interés y un referente de desempeño financiero
+                                                en su sector.
+
+                                                La hoja de ruta de Donguil pretende alinear a su gente detrás de un
+                                                conjunto coherente de prioridades estratégicas que aceleren el logro de
+                                                sus objetivos. Estas metas exigen de sus colaboradores una inspiración
+                                                de largo plazo, que permita construir el futuro y las acciones
+                                                empresariales de corto plazo.
+
+                                                Donguil trabaja para alcanzar el liderazgo y la confianza mediante el
+                                                cumplimiento de las expectativas de los consumidores, los accionistas,
+                                                las comunidades en las que opera y la sociedad en su conjunto. </p>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </article>
+            </div>
+    </section>
+    </div>
+    <!-- FOOTER DE LA PAGINA-->
+
+    <footer class="footer">
+
+        <div class="container-footer">
+
+            <div>
+
+                <img  class="footer-img" src="img/acc3.png">
+
+
+            </div>
+
+            
+            <div class="footer-row">
+                
+
+
+
+
+                <div class="footer-links">
+                    <h4>Sobre Nosotros</h4>
+                    <ul>
+                        <li><a href="#">Nuestra Historia</a></li>
+                        <li><a href="#">Principios Coorporativos</a></li>
+                        <li><a href="#">Comité de Dirección</a></li>
+                        <li><a href="#">Campaña Araucanía Sana</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Enlaces Útiles</h4>
+                    <ul>
+                        <li><a href="#">Proveedores</a></li>
+                        <li><a href="#">Trabaja con Nosotros</a></li>
+                        <li><a href="#">Noticias</a></li>
+                        <li><a href="#">Recetas DONGUIL</a></li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="row">
+                <div class="col">
+            <div class="footer-row">
+                <div class="footer-links">
+                    <h4>Síguenos</h4>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+            </div>
+
+        </div>
+
+
+
+    </footer>
+    
+
+</body>
+
+</html>
